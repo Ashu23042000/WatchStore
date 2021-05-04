@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/admin.css">
+</head>
+
+<body>
+    <div class="navbar container">
+        <div class="brand">
+            <h1>AshWatchStore</h1>
+        </div>
+        <div class="navMenu">
+            <ul>
+                <li>
+                    <a href="/cart">Cart</a>
+                </li>
+
+                <li>
+                    <a href="/signup">Signup</a>
+                </li>
+
+                <li>
+                    <a href="/login">Login</a>
+                </li>
+
+                <li>
+                    <a href="/">Home</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="table_div">
+
+
+        <%if(orders){%>
+            <div class="row">
+                <div class="order_details">
+                    <h3>Orders</h3>
+                </div>
+                <div class="customer">
+                    <h3>Customer name</h3>
+                </div>
+                <div class="address">
+                    <h3>Address</h3>
+                </div>
+                <div class="status">
+                    <h3>Status</h3>
+                </div>
+                <div class="placed_at">
+                    <h3>Placed at</h3>
+                </div>
+            </div>
+
+            <%orders.forEach((order)=>{%>
+
+                <div class="row">
+                    <div class="order_details">
+                        <p>
+                            <%=order._id%>
+                        </p>
+
+                        <%Object.values(order.items).forEach((item)=>{%>
+                            <p>
+                                <%=item.item.name%>
+                            </p>
+                            <%})%>
+                    </div>
+                    <div class="customer">
+                        <p>
+                            <%=order.customerId.name%>
+                        </p>
+                    </div>
+                    <div class="address">
+                        <p>
+                            <%=order.address%>
+                        </p>
+                    </div>
+                    <div class="status">
+                        <form action="/order/update-order" method="POST">
+                            <select name="status" class="status_id" onchange="submit()">
+                                <option value="Placed">Placed</option>
+                                <option value="Confirmed">Confirmed </option>
+                                <option value="Shipped">Shipped</option>
+                                <option value="Delivered">Delivered </option>
+                            </select>
+                            <input type="hidden" name="order_id" value="<%=order._id%>">
+                        </form>
+                    </div>
+                    <div class="placed_at">
+                        <p>
+                            <%=moment(order.createdAt).format("hh:mm A")%>
+                        </p>
+                    </div>
+                </div>
+                <%})%>
+
+                    <%}else{%>
+                        <h1>No orders</h1>
+                        <%}%>
+
+
+
+
+                            <div class="footer_block container">
+                                <div class="copyright">
+                                    <h3>copyright@2020company name</h3>
+                                </div>
+                            </div>
+
+
+                            <script src="/js/admin.js"></script>
+
+</body>
+
+</html>

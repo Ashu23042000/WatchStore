@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/customerOrders.css">
+</head>
+
+<body>
+    <div class="navbar container">
+        <div class="brand">
+            <h1>AshWatchStore</h1>
+        </div>
+        <div class="navMenu">
+            <ul>
+                <li>
+                    <a href="/cart">Cart</a>
+                </li>
+
+                <li>
+                    <a href="/signup">Signup</a>
+                </li>
+
+                <li>
+                    <a href="/login">Login</a>
+                </li>
+
+                <li>
+                    <a href="/">Home</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="table_div">
+
+        <%if(orders){%>
+            <div class="row">
+                <div class="order_details">
+                    <h3>Order Id</h3>
+                </div>
+                <div class="address">
+                    <h3>Address</h3>
+                </div>
+                <div class="product_price">
+                    <h3>Total Bill</h3>
+                </div>
+            </div>
+            <%orders.forEach((order)=>{%>
+
+                <div class="row">
+                    <div class="product_details">
+                        <h4>
+                            <a href="/customer-order/status/<%=order._id%>">
+                                <%=order._id%>
+                            </a>
+                        </h4>
+                    </div>
+                    <div class="product_qty">
+                        <h4>
+                            <%=order.address%>
+                        </h4>
+                    </div>
+                    <div class="product_price">
+                        <h4>
+                            $<%=order.totalBill%>
+
+                        </h4>
+                    </div>
+                </div>
+                <%})}else{%>
+
+                    <div class="empty_order">
+                        <h1>Not ordered yet</h1>
+                    </div>
+
+                    <%}%>
+    </div>
+
+
+    <div class="footer_block container">
+        <div class="copyright">
+            <h3>copyright@2020company name</h3>
+        </div>
+    </div>
+
+</body>
+
+</html>

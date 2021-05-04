@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/customerOrderStatus.css">
+</head>
+
+<body>
+    <div class="navbar container">
+        <div class="brand">
+            <h1>AshWatchStore</h1>
+        </div>
+        <div class="navMenu">
+            <ul>
+                <li>
+                    <a href="/cart">Cart</a>
+                </li>
+
+                <li>
+                    <a href="/signup">Signup</a>
+                </li>
+
+                <li>
+                    <a href="/login">Login</a>
+                </li>
+
+                <li>
+                    <a href="/">Home</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <input type="hidden" class="status_value" value="<%=order.status%>">
+    <input type="hidden" class="order_id" value=" <%=order._id%>">
+    <div class="middle_div">
+        <div class="status">
+            <h3>Order Id : <%=order._id%>
+            </h3>
+            <ul>
+                <li class="Placed ">Placed</li>
+                <li class="Confirmed">Confirmed</li>
+                <li class="Shipped">Shipped</li>
+                <li class="Delivered">Delivered</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="footer_block container">
+        <div class="copyright">
+            <h3>copyright@2020company name</h3>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/customerOrderStatus.js"></script>
+
+</body>
+
+</html>
