@@ -80,15 +80,24 @@ const server = app.listen(5000, () => {
 
 // Socket setup----
 
+
+
+
+
 const io = require("socket.io")(server);
 io.on("connection", socket => {
     socket.on("join", orderId => {
-        console.log(orderId);
         socket.join(orderId);
+        console.log(orderId)
     });
 });
 
 eventEmitter.on("updateOrder", (data) => {
-    console.log(data);
     io.to(`order_${data.order_id}`).emit("orderUpdated", data);
+    console.log(data.order_id)
+
 });
+
+
+
+

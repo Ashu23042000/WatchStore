@@ -42,6 +42,10 @@
     color: black;
 }
 
+.hamburger {
+    display: none;
+}
+
 .banner {
     height: 350px;
     margin-top: 2rem;
@@ -215,125 +219,193 @@
     font-weight: 100;
 }
 
-.loginDiv {
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 60px;
-    width: 400px;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    /* border: 1px solid rebeccapurple; */
-}
-
-.loginForm {
-    text-align: center;
-}
-
-.loginForm h1 {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.loginForm input {
-    width: 80%;
-    margin-bottom: 1.5rem;
-    height: 35px;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    background-color: rgb(206, 187, 187);
-    text-align: center;
-    font-size: 1rem;
-}
-
-.loginForm button {
-    width: 80%;
-    height: 40px;
-    margin-bottom: 1rem;
-    border: none;
-    outline: none;
-    cursor: pointer;
+.hamburger_navMenu {
+    display: none;
     background-color: #66CCFF;
-    font-size: 1rem;
-}
-
-.option1 {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.option2 span {
-    margin-left: 3px;
-    color: teal;
-}
-
-.signupDiv {
-    margin-top: 3rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 110px;
-    width: 400px;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-}
-
-.signupForm {
-    text-align: center;
-}
-
-.signupForm h1 {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.signupForm input {
-    width: 80%;
-    margin-bottom: 1.5rem;
-    height: 35px;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    background-color: rgb(206, 187, 187);
-    text-align: center;
-    font-size: 1rem;
-}
-
-.signupForm button {
-    width: 80%;
-    height: 40px;
-    margin-bottom: 1rem;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background-color: #66CCFF;
-    font-size: 1rem;
-}
-
-.signupForm .option1 span {
-    margin-left: 5px;
-    color: teal;
-}
-
-.table_div {
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 60px;
-    width: 90%;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-}
-
-table {
-    width: 90%;
-}
-
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
     padding: 1rem;
+}
+
+.hamburger_navMenu li {
+    list-style: none;
+    margin: 1rem;
+}
+
+.hamburger_navMenu li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* media query--- */
+
+@media(max-width:700px) {
+    .navbar {
+        height: 45px;
+        background-color: #66CCFF;
+    }
+    .container {
+        width: 100vw;
+        display: flex;
+        margin: 0 auto;
+    }
+    .navMenu {
+        display: none;
+    }
+    .show {
+        display: block;
+    }
+    .brand {
+        width: 70%
+    }
+    .brand h1 {
+        font-size: 25px;
+    }
+    .hamburger {
+        display: block;
+        width: 20%;
+        margin: 0.6rem 0 0.6rem 5rem;
+    }
+    .hamburger i {
+        font-size: 1.5rem;
+    }
+    .banner {
+        height: 180px;
+        margin-top: 1rem;
+        background: url(../img/backgroundTemplate1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0px;
+    }
+    .textBlock {
+        margin: 2rem 1rem;
+        box-sizing: border-box;
+        padding: 0.5rem;
+        height: 70px;
+        background-color: rgba(91, 141, 175, 0.4);
+    }
+    .textBlock h1 {
+        font-weight: 100;
+        font-size: 16px;
+    }
+    .banner_btn {
+        height: 20px;
+        width: 80px;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        cursor: pointer;
+        margin-top: 0.8rem;
+        font-size: 0.7rem;
+        background-color: black;
+        color: white;
+    }
+    .banner_block {
+        width: 100%;
+        height: 130px;
+        display: flex;
+        margin-top: 2rem;
+    }
+    .banner1 {
+        width: 50%;
+        background: url(../img/watchBackground2Template1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-right: 0.1rem;
+    }
+    .banner1 .text_block {
+        margin: 2rem 0.5rem;
+        color: white;
+    }
+    .banner1 .text_block span {
+        font-weight: 100;
+    }
+    .banner1 .text_block h1 {
+        font-weight: 100;
+        font-size: 17px;
+    }
+    .banner2_btn {
+        height: 20px;
+        width: 80px;
+        border: none;
+        border-radius: 9px;
+        outline: none;
+        cursor: pointer;
+        margin-top: 1rem;
+        font-size: 0.8rem;
+        background: whitesmoke;
+        color: black;
+    }
+    .banner2 {
+        width: 50%;
+        background: url(../img/watchBackgroundTemplate1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-left: 0.1rem;
+        background-position: 0px;
+    }
+    .banner2 .text_block {
+        margin: 2rem 0.5rem;
+        color: white;
+    }
+    .banner2 .text_block span {
+        font-weight: 100;
+    }
+    .banner2 .text_block h1 {
+        font-weight: 100;
+        font-size: 17px;
+    }
+    .title {
+        margin-top: 2rem;
+    }
+    .title h1 {
+        margin: 0 auto;
+        font-weight: 100;
+        font-size: 20px;
+    }
+    .title h1::after {
+        display: block;
+        content: "";
+        height: 3px;
+        width: 8 0px;
+        background-color: black;
+        margin: 0.5rem auto 0 auto;
+    }
+    .products .product_row {
+        display: grid;
+        column-gap: 1rem;
+        grid-template-columns: 1fr 1fr;
+    }
+    .products .product_row .product {
+        width: 100%;
+        height: 230px;
+        padding: 1rem;
+        margin-top: 2rem;
+    }
+    .product_img img {
+        width: 100%;
+        height: 100%;
+    }
+    .product_price {
+        margin-top: 0.5rem;
+        color: green;
+    }
+    .cart_btn {
+        margin-top: 1rem;
+        width: 100%;
+        height: 40px;
+        background-color: black;
+        color: white;
+        font-size: 0.8rem;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+    .footer_block {
+        margin-top: 4rem;
+        position: relative;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #66CCFF;
+        height: 45px;
+    }
 }

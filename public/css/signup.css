@@ -46,34 +46,52 @@
     display: none;
 }
 
-.middle_div {
-    width: 90%;
-    margin-top: 150px;
+.signupDiv {
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 110px;
+    width: 400px;
+    height: 400px;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
-.middle_div .status h3 {
-    margin-bottom: 3rem;
+.signupForm {
+    text-align: center;
 }
 
-.middle_div .status ul {
-    list-style: none;
+.signupForm h1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
-.middle_div .status ul li {
-    font-size: 20px;
-    margin-bottom: 2rem;
+.signupForm input {
+    width: 80%;
+    margin-bottom: 1.5rem;
+    height: 35px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(206, 187, 187);
+    text-align: center;
+    font-size: 1rem;
 }
 
-.completed::after {
-    display: block;
-    content: "";
-    width: 150px;
-    height: 3px;
-    background-color: aqua;
-    margin-top: 8px;
+.signupForm button {
+    width: 80%;
+    height: 40px;
+    margin-bottom: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #66CCFF;
+    font-size: 1rem;
+}
+
+.signupForm .option1 span {
+    margin-left: 5px;
+    color: teal;
 }
 
 .footer_block {
@@ -140,30 +158,46 @@
     .hamburger i {
         font-size: 1.5rem;
     }
-    .middle_div {
-        width: 100vw;
-        margin-top: 150px;
-        margin-bottom: 100px;
+    .signupDiv {
+        margin-top: 5rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 110px;
+        width: 90%;
+        height: 400px;
         display: flex;
         justify-content: center;
-        align-items: center;
     }
-    .middle_div .status h3 {
-        margin-bottom: 3rem;
+    .signupForm {
+        text-align: center;
     }
-    .middle_div .status ul {
-        list-style: none;
+    .signupForm h1 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
-    .middle_div .status ul li {
-        font-size: 20px;
-        margin-bottom: 2rem;
+    .signupForm input {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        height: 35px;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        background-color: rgb(206, 187, 187);
+        text-align: center;
+        font-size: 1rem;
     }
-    .completed::after {
-        display: block;
-        content: "";
-        width: 150px;
-        height: 3px;
-        background-color: aqua;
-        margin-top: 8px;
+    .signupForm button {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 1rem;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: #66CCFF;
+        font-size: 1rem;
+    }
+    .signupForm .option1 span {
+        margin-left: 5px;
+        color: teal;
     }
 }

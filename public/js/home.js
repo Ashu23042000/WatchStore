@@ -13,6 +13,23 @@ banner2_btn.forEach(btn => {
     });
 });
 
+
+
+
+
+const hamburger = document.querySelector(".hamburger");
+const hamburger_navMenu = document.querySelector(".hamburger_navMenu");
+
+hamburger.addEventListener("click", () => {
+    hamburger_navMenu.classList.toggle("show");
+});
+
+
+
+
+
+
+
 // Add to cart functionality------
 
 let addToCart = document.querySelectorAll(".cart_btn");

@@ -7,10 +7,6 @@
 }
 
 .navbar {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
     height: 55px;
     background-color: #66CCFF;
 }
@@ -46,22 +42,8 @@
     color: black;
 }
 
-.footer_block {
-    margin-top: 1rem;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #66CCFF;
-    height: 45px;
-}
-
-.copyright {
-    margin: 1rem auto;
-}
-
-.copyright h3 {
-    font-weight: 100;
+.hamburger {
+    display: none;
 }
 
 .table_div {
@@ -160,4 +142,148 @@
     border: none;
     outline: none;
     cursor: pointer;
+}
+
+.footer_block {
+    margin-top: 1rem;
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #66CCFF;
+    height: 45px;
+}
+
+.copyright {
+    margin: 1rem auto;
+}
+
+.copyright h3 {
+    font-weight: 100;
+}
+
+.hamburger_navMenu {
+    display: none;
+    background-color: #66CCFF;
+    padding: 1rem;
+}
+
+.hamburger_navMenu li {
+    list-style: none;
+    margin: 1rem;
+}
+
+.hamburger_navMenu li a {
+    text-decoration: none;
+    color: black;
+}
+
+@media(max-width:700px) {
+    .navbar {
+        height: 45px;
+        background-color: #66CCFF;
+    }
+    .container {
+        width: 100%;
+        display: flex;
+        margin: 0 auto;
+    }
+    .navMenu {
+        display: none;
+    }
+    .show {
+        display: block;
+    }
+    .brand {
+        width: 80%
+    }
+    .brand h1 {
+        font-size: 25px;
+    }
+    .hamburger {
+        display: block;
+        width: 20%;
+        margin: 0.6rem 0 0.6rem 5rem;
+    }
+    .hamburger i {
+        font-size: 1.5rem;
+    }
+    .table_div {
+        margin-top: 100px;
+        margin-bottom: 60px;
+        width: 100vw;
+    }
+    .row {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+    }
+    .product_details {
+        text-align: center;
+    }
+    .product_details img {
+        width: 150px;
+        height: 150px;
+    }
+    .product_details h5 {
+        margin: 3px 0;
+        color: green;
+        /* text-align: center; */
+    }
+    .remove_btn {
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 0.2rem;
+        background-color: #66CCFF;
+    }
+    .empty_cart {
+        width: 100vw;
+        margin-top: 5rem;
+        /* background-color: gray; */
+    }
+    .empty_cart img {
+        width: 90%;
+    }
+    .empty_cart h1 {
+        margin-left: 2rem;
+        font-weight: 100;
+    }
+    .total_amount {
+        width: 90%;
+        margin-top: 2rem;
+    }
+    .total_amount h3 {
+        float: right;
+    }
+    .total_amount h3 span {
+        color: green;
+    }
+    .place_order {
+        width: 90%;
+        margin: 100px auto;
+    }
+    .place_order h3 {
+        margin-bottom: 1rem;
+    }
+    .place_order input {
+        width: 100%;
+        height: 35px;
+        outline: none;
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+    .place_order button {
+        width: 100px;
+        height: 30px;
+        background-color: #66CCFF;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
 }
