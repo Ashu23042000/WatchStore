@@ -3,6 +3,7 @@ const app = express();
 require('dotenv').config()
 const path = require("path");
 const ejs = require("ejs")
+const port = process.env.PORT || 5000;
 const mongoose = require("mongoose");
 const session = require("express-session");
 const flash = require("express-flash");
@@ -17,6 +18,7 @@ const logout = require("./routes/logout");
 const order = require("./routes/order");
 const customerOrders = require("./routes/customerOrders");
 const customerOrderStatus = require("./routes/customerOrderStatus");
+
 
 
 // Database connection---
@@ -74,8 +76,8 @@ app.use("/customer-orders", customerOrders);
 app.use("/customer-order/status", customerOrderStatus);
 
 
-const server = app.listen(5000, () => {
-    console.log("Server is running on port 5000");
+const server = app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
 });
 
 // Socket setup----
